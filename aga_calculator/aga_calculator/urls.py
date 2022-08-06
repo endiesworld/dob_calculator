@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from calculate_age.views import calculate_age
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('howold/', calculate_age, name='calculate_age')
 ]
